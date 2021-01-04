@@ -9,16 +9,22 @@ var resultBox = document.querySelector(".result");
 
 canvas.addEventListener("mousedown", startDrawing);
 canvas.addEventListener("mousemove", draw);
-canvas.addEventListener("mouseup", stopDrawing);
+canvas.addEventListener("mouseup", (e) => {
+  stopDrawing(e);
+  predict();
+});
 canvas.addEventListener("mouseout", stopDrawing);
 
 canvas.addEventListener("touchstart", startDrawing);
 canvas.addEventListener("touchmove", draw);
-canvas.addEventListener("touchend", stopDrawing);
+canvas.addEventListener("touchend", (e) => {
+  stopDrawing(e);
+  predict();
+});
 
 function getPosition(event) {
-  const clientX = event.clientX || event.touches[0].clientX;
-  const clientY = event.clientY || event.touches[0].clientY;
+  const clientX = event.clientX || event.touches[0].pageX;
+  const clientY = event.clientY || event.touches[0].pageY;
   const canvasX = clientX - event.target.offsetLeft;
   const canvasY = clientY - event.target.offsetTop;
 
@@ -51,7 +57,6 @@ function draw(ev) {
 function stopDrawing(ev) {
   ev.preventDefault();
   drawing = false;
-  predict();
 }
 
 document.querySelector(".clear-btn").addEventListener("click", () => {
