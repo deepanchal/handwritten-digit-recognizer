@@ -68,7 +68,10 @@ document.querySelector(".clear-btn").addEventListener("click", () => {
 document.querySelector(".predict-btn").addEventListener("click", predict);
 
 async function loadModel() {
+  resultBox.style.visibility = "visible";
+  resultBox.innerText = "Loading Model...";
   model = await tf.loadLayersModel("model/model.json");
+  resultBox.innerHTML = "Model Loaded &#10003;";
 }
 
 async function predict() {
