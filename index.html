@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handwritten Digit Recognizer</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Import TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+  </head>
+
+  <body>
+    <h1>Handwritten Digit Recognizer</h1>
+
+    <button class="btn red clear-btn">CLEAR</button>
+
+    <canvas id="drawing-canvas" width="280" height="280"></canvas>
+
+    <button class="btn green predict-btn">PREDICT</button>
+
+    <div class="gray result"></div>
+    <!-- Import the app file -->
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

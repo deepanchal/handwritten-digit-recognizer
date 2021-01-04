@@ -1,0 +1,75 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  background: black;
+}
+
+#drawing-canvas {
+  background: black;
+  border: 1px solid black;
+  border-radius: 15%;
+  border: 5px solid gray;
+}
+
+.btn {
+  margin: 10px 10px;
+  padding: 15px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 15px;
+  transition: all 300ms ease-in-out;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  outline: none;
+  border-bottom: none;
+}
+
+.green {
+  border: none;
+  background: limegreen;
+  color: white;
+  border-bottom: 5px solid green;
+}
+
+.red {
+  border: none;
+  background: rgb(233, 60, 60);
+  color: white;
+  border-bottom: 5px solid rgb(129, 0, 0);
+}
+
+.result {
+  margin: 10px 10px;
+  padding: 15px 20px;
+  font-size: 1.3em;
+  background: gray;
+  color: white;
+  border-bottom: 5px solid black;
+  border-radius: 15px;
+  visibility: hidden;
+}
