@@ -3,7 +3,7 @@ var canvas = document.querySelector("#drawing-canvas");
 var ctx = canvas.getContext("2d");
 var strokeStyle = "white";
 var strokeLineJoin = "round";
-var lineWidth = 10;
+var lineWidth = 20;
 var drawing = false;
 var resultBox = document.querySelector(".result");
 
